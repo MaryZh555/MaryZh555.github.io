@@ -1,0 +1,95 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    
+    
+}
+
+.header {
+    max-width: 812px;
+    margin: auto;
+
+    & * {
+        color: #3A4562;
+    }
+
+    .border-b {
+        border-color: #3A4562;
+    }
+}
+
+main {
+    margin: auto;
+    .main-content * {
+        color: #3A4562;
+        max-width: 723px;
+        // margin: auto;
+
+        .main-content-footer {
+            .border-b {
+                border-color: #3A4562;
+            }
+        }
+    }
+    .employment-type-el {
+        width: 222px;
+        text-align: center;
+        border: 1px solid #55699e;
+        border-radius: 8px;
+        padding: 17px;
+        font-weight: 800;
+        background-color: #E1E6F4;
+        margin-right: 17px;
+    }
+
+    .benefits-el {
+        width: 222px;
+        text-align: center;
+        border: 1.5px solid #FFCF00;
+        border-radius: 8px;
+        padding: 17px;
+        font-weight: 800;
+        background-color: #ffd00026;
+        color: #988B49;
+        margin-right: 17px;
+    }
+
+    .img-el {
+        width: 209px;
+        height: 115px;
+        border-radius: 8px;
+    }
+
+    .btn-apply {
+        background-color: #3A4562;
+        color: white;
+        padding: 18px 30px;
+        border-radius: 8px;
+        margin: 35px 0;
+    }
+}
+
+aside {
+    width: 402px;
+    height: 436px;
+    border-radius: 8px;
+
+    .content {
+        padding: 29px 51px;
+        background: url(./map-bg.png) center no-repeat;
+        color: white;
+    }
+
+    .map {
+        margin: auto;
+        background: #2A3047;
+    }
+}
+
+.return-btn{
+    width: 230px;
+    height: 50px;
+    background-color: #E1E6F4;
+    padding: 16px 24px;
+    color: #3A4562;
+
+}

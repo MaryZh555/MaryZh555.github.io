@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../styles/styleDecsr.css">
+</head>
+
+<body>
+    <main class="xl:flex-row flex flex-col justify-evenly p-6 md:p-14">
+        <!-- Main content section: description and additional info -->
+        <section class="main-content lg:px-14">
+            <!-- Header without API data -->
+            <section
+                class="header flex md:flex-row flex-col justify-between pb-2.5 divide-y-2 sm:divide-y-0 md:border-b">
+                <h1 class="text-2xl font-bold pb-3">Job Details</h1>
+                <div class="pt-4">
+                    <a href="#" class="mx-3 "><i class="fa-regular fa-bookmark  mr-1"></i> Save to my List
+                    </a>
+                    <a href="#" class="mx-3 "><i class="fa-solid fa-share-nodes  mr-1"></i> Share</a>
+                </div>
+            </section>
+            <button class="btn-apply hidden md:block">APPLY NOW</button>
+            <!-- Main content header:  -->
+            <div class="main-content-header flex flex-col ">
+                <div class="flex lg:gap-16 flex-col md:flex-row">
+                    <h2 id="title" class=" text-2xl font-bold flex-1"></h2>
+                    <div class="shrink-0 flex md:flex-col flex-col-reverse self-end lg:text-left text-right">
+                        <p id="salary" class="font-bold text-xl"></p>
+                        <p class="text-lg">Brutto, per year</p>
+                    </div>
+
+                </div>
+                <p id="postedAt" class=" my-2 text-sm md:text-base"></p>
+
+            </div>
+            <div class="main-content-body ">
+                <p id="descr"></p>
+                <button class="btn-apply my-8 w-full md:w-max text-xs md:text-base">APPLY NOW</button>
+            </div>
+            <div class="main-content-footer md:flex-col flex-col-reverse flex">
+                <div>
+                    <h3 class="text-2xl font-bold border-b pb-2.5 mt-10">Additional info</h3>
+                    <h5 class="text-lg my-2">Employment type</h5>
+                    <div id="employment-type" class=" flex"></div>
+                    <h5 class="text-lg py-2 mt-5">Benefits</h5>
+                    <div id="benefits" class=" flex"></div>
+                </div>
+                <div>
+                    <h5 class="text-2xl font-bold border-b pb-2.5 mt-20">Attached images</h5>
+                    <div id="images" class=" flex flex-row gap-3 my-5">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Aside include: address, contacts and map -->
+        <aside class=" w-max py-14 lg:px-14">
+            <div class="content rounded-t-lg space-y-1">
+                <p id="dep-name" class=" font-bold"></p>
+                <span class="inline-flex items-baseline gap-2"><i class="fa-solid fa-location-dot"></i>
+                    <p id="address"></p>
+                </span>
+                <p  id="phone"></p>
+                <p id="email"></p>
+            </div>
+            <div id="map" class=" rounded-b-lg"></div>
+        </aside>
+    </main>
+    <!-- Return button -->
+    <footer class="p-6 md:p-14">
+        <a class="return-btn rounded-lg text-xs flex item-center font-bold md:my-14 my-6" href="./index.html"><i
+                class="fa-solid fa-chevron-left text-lg mr-2"></i>RETURN TO JOB BOARD</a>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/dd789de8ca.js" crossorigin="anonymous"></script>
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <!-- Custom -->
+    <!-- JSON -->
+    <script type="text/javascript" src="../js/response.json"></script>
+    <!-- Bundle of description.js file by Browserify -->
+    <script src="../js/descriptionBundle.js"></script>
+</body>
+
+</html>
