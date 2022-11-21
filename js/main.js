@@ -103,7 +103,7 @@ let final;
 function choose(choise) {
     final = choise;
     localStorage.setItem("id", `${final}`);
-    location.href = "../html/descriptionPage.html"
+    location.href = "../description.js"
 }
 
 

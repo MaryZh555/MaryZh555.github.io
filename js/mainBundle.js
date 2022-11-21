@@ -1,37 +1,21 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-
 // Getting data from JSON file
 const data = require('./response.json');
 console.log(data);
 
-
 // Main  populate function
 async function populate() {
     // Getting API converting to json
-    // const requestURL = 'https://api.json-generator.com/templates/ZM1r0eic3XEy/data?access_token=wm3gg940gy0xek1ld98uaizhz83c6rh2sir9f9fu';
+    // const requestURL = 'https:';
     // const requestURL = '../response.json';
     // const request = new Request(requestURL);
     // const response = await fetch(request);
     // jobList = await response.json();
-
+    
     const jobList = data;
-    console.log(jobList);
-
     //Calling other functions
     populateArticles(jobList);
-
 }
-
-// function populateHeader(obj) {
-//     const header = document.querySelector('header');
-//     const myH1 = document.createElement('h1');
-//     myH1.textContent = obj[0]["title"];
-//     header.appendChild(myH1);
-
-//     // const myPara = document.createElement('p');
-//     // myPara.textContent = `Hometown: ${obj.homeTown} Formed: ${obj.formed}`;
-//     // header.appendChild(myPara);
-// }
 
 function populateArticles(obj) {
     const section = document.querySelector('section');
@@ -82,12 +66,6 @@ function populateArticles(obj) {
         myPara1.textContent = `  ${obj[item].address}`;
         iconLoc.className = "fa-solid fa-location-dot";
 
-        /** 
-        //Image 
-        const myImage = document.createElement('img');
-        myImage.setAttribute("src", `${obj[item].pictures[Math.floor(Math.random() * 3)]} `);
-        */
-
         // divAside
         const divAside = document.createElement('div');
         divAside.className = "flex flex-col justify-between items-end shrink-0";
@@ -126,7 +104,7 @@ let final;
 function choose(choise) {
     final = choise;
     localStorage.setItem("id", `${final}`);
-    location.href = "../html/descriptionPage.html"
+    location.href = "../description.js"
 }
 
 
