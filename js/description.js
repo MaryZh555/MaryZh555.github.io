@@ -1,6 +1,7 @@
 // Getting an id by item in index.html
 // let myId = localStorage.getItem("id");
-let myId = sessionStorage.getItem("id");
+console.log(sessionStorage);
+let myId = sessionStorage.getItem('id');
 console.log(`YOU GOT A VAR/DATA: ${myId}, it is a ${typeof (myId)}`);
 
 // Getting data from JSON file

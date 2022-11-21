@@ -51,7 +51,14 @@ function populateArticles(obj) {
         myAnchor.setAttribute("id", obj[item].id);
         myAnchor.setAttribute("target", "_self");
         myAnchor.setAttribute("href", "descriptionPage.html");
-        myAnchor.setAttribute("onClick", `choose(${obj[item].id})`);
+        // myAnchor.setAttribute("onClick", `choose(${obj[item].id})`);
+
+        // Saving clicked item's id to send it to descriptionPage.html
+        myAnchor.addEventListener('click', function (choice) {
+            choice = obj[item].id;
+            sessionStorage.setItem('id', `${choice}`);
+            location.href = "descriptionPage.html";
+        });
 
         //Department Name
         const myName = document.createElement('p')
@@ -100,13 +107,16 @@ populate();
 
 // Saving clicked item id to send it to description.js
 // let final;
-function choose(choice) {
-    let final = choice;
-    // localStorage.setItem("id", `${final}`);
-    sessionStorage.setItem("id", `${final}`);
-    location.href = "descriptionPage.html";
-    // location.href = "js/descriptionBundle.js";
-}
+// function choose(choice) {
+//     let final = choice;
+//     // localStorage.setItem("id", `${final}`);
+//     sessionStorage.setItem('id', `${final}`);
+//     console.log(sessionStorage);
+//     location.href = "descriptionPage.html";
+//     // location.href = "js/descriptionBundle.js";
+// }
+
+
 
 
 
