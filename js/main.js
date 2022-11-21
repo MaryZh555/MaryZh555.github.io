@@ -10,7 +10,7 @@ async function populate() {
     // const request = new Request(requestURL);
     // const response = await fetch(request);
     // jobList = await response.json();
-    
+
     const jobList = data;
     //Calling other functions
     populateArticles(jobList);
@@ -49,9 +49,9 @@ function populateArticles(obj) {
         myAnchor.textContent = obj[item].title;
         myAnchor.className = "lg:font-bold lg:text-xl font-normal text-lg leading-6";
         myAnchor.setAttribute("id", obj[item].id);
-        myAnchor.setAttribute("target", "_blank");
+        // myAnchor.setAttribute("target", "_blank");
         myAnchor.setAttribute("href", "descriptionPage.html");
-        myAnchor.setAttribute("onClick", `choose("${obj[item].id}")`);
+        myAnchor.setAttribute("onClick", `choose(${obj[item].id})`);
 
         //Department Name
         const myName = document.createElement('p')
@@ -99,12 +99,13 @@ function populateArticles(obj) {
 populate();
 
 // Saving clicked item id to send it to description.js
-let final;
-function choose(choise) {
-    final = choise;
+// let final;
+function choose(choice) {
+    let final = choice;
     // localStorage.setItem("id", `${final}`);
     sessionStorage.setItem("id", `${final}`);
     location.href = "descriptionPage.html";
+    // location.href = "js/descriptionBundle.js";
 }
 
 
