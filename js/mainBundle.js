@@ -50,7 +50,7 @@ function populateArticles(obj) {
         myAnchor.textContent = obj[item].title;
         myAnchor.className = "lg:font-bold lg:text-xl font-normal text-lg leading-6";
         myAnchor.setAttribute("id", obj[item].id);
-        // myAnchor.setAttribute("target", "_blank");
+        myAnchor.setAttribute("target", "_self");
         myAnchor.setAttribute("href", "descriptionPage.html");
         myAnchor.setAttribute("onClick", `choose(${obj[item].id})`);
 
