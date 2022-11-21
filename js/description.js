@@ -1,11 +1,10 @@
+// Getting an id by item in index.html
+let myId = localStorage.getItem("id");
+console.log(`YOU GOT A VAR/DATA: ${myId}, it is a ${typeof (myId)}`);
+
 // Getting data from JSON file
 const data = require('./response.json');
 console.log(data);
-
-// Getting an id by item in index.html
-var myId = localStorage.getItem("id");
-console.log(`YOU GOT A VAR/DATA: ${myId}, it is a ${typeof (myId)}`);
-
 
 // Main populate function
 async function populate() {
