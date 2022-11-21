@@ -102,7 +102,8 @@ populate();
 let final;
 function choose(choise) {
     final = choise;
-    localStorage.setItem("id", `${final}`);
+    // localStorage.setItem("id", `${final}`);
+    sessionStorage.setItem("id", `${final}`);
     location.href = "descriptionPage.html";
 }
 
